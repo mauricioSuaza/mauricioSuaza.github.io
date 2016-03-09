@@ -9,7 +9,7 @@ function setup() {
   stroke(0); 
   fill(150);
   
-  fullScreen(true);
+ 
 
   ca = new Ca;
   
@@ -44,7 +44,7 @@ function windowResized() {
 function Ca () {
  
   this.generation = 0;
-  this.w = 20;
+  this.w = 15;
   
     this.tam = parseInt(windowWidth/this.w);
   this.cells = [this.tam]; 
@@ -142,7 +142,7 @@ function Ca () {
     this.cells[i] = int(random(2));
   }
 
-    this.cells[this.tam/2] = 1;   // We arbitrarily start with just the middle cell having a state of "1"
+    //this.cells[this.tam/2] = 1;   // We arbitrarily start with just the middle cell having a state of "1"
     this.generation = 0;
   }
 };
