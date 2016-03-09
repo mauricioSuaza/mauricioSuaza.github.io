@@ -44,7 +44,7 @@ function windowResized() {
 function Ca () {
  
   this.generation = 0;
-  this.w = 1;
+  this.w = 20;
   this.tam = parseInt(windowWidth/this.w);
   this.cells = [this.tam]; 
   
