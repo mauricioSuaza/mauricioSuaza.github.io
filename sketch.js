@@ -43,7 +43,7 @@ function windowResized() {
 function Ca () {
  
   this.generation = 0;
-  this.w = 2;
+  this.w = 20;
   
   this.tam = parseInt(windowWidth/this.w);
   
@@ -113,6 +113,13 @@ function Ca () {
         else
         ellipse(j*this.w, this.generation*this.w, this.w, this.w)*/
         rect(j*this.w, this.generation*this.w, this.w, this.w);
+        
+        /*beginShape();
+        vertex(30, 20);
+        vertex(85, 20);
+        vertex(85, 75);
+        vertex(30, 75);
+        endShape(CLOSE);*/
     }
         this.generation++;
   };
