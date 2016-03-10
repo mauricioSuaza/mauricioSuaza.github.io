@@ -43,10 +43,11 @@ function windowResized() {
 function Ca () {
  
   this.generation = 0;
-  this.w = 15;
+  this.w = 2;
   
-    this.tam = parseInt(windowWidth/this.w);
-  this.cells = [this.tam]; 
+  this.tam = parseInt(windowWidth/this.w);
+  
+    this.cells = [this.tam]; 
   
   this.ruleset = [ 0, 1, 0, 1, 1, 0, 1, 0];
   
@@ -107,8 +108,11 @@ function Ca () {
       if (this.cells[j] == 1) fill(0);
       else               fill(255);
       noStroke();
-      rect(j*this.w, this.generation*this.w, this.w, this.w);
-      //ellipse(j*this.w, this.generation*this.w, this.w, this.w)
+        var t = random(1);
+        /*if (t>0.5){rect(j*this.w, this.generation*this.w, this.w, this.w);}
+        else
+        ellipse(j*this.w, this.generation*this.w, this.w, this.w)*/
+        rect(j*this.w, this.generation*this.w, this.w, this.w);
     }
         this.generation++;
   };
@@ -143,6 +147,10 @@ function Ca () {
 
     //this.cells[this.tam/2] = 1;   // We arbitrarily start with just the middle cell having a state of "1"
     this.generation = 0;
+      
+    //  this.w = int(random(10,20));
+    
+      this.tam = parseInt(windowWidth/this.w);
   }
 };
 
